@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,=">
+  <title>Web3 - 24 - Gallery 2</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    h1{ text-align: center;}
+    ul{
+      width: 400px;
+      margin: 10px auto;
+     }
+    ul li{
+      width: 130px; height: 90px;
+      display: inline-block;
+      border-radius: 20px;
+      overflow: hidden;
+      opacity: 0.5;
+      transition: all 0.5s;
+      list-style-type: none;
+    }
+    ul li:hover{opacity: 1; cursor: pointer;}
+    ul li img{ 
+      width: 100%; height: 100%;
+    }
+    #picTarg{
+      width: 600px;
+      height: 380px;
+      background-color: #eee;
+      display: block; margin: 5px auto;
+      border-radius: 20px;
+    }
+  </style>
+  <script>
+    
+    function chPic(newP){
+      document.getElementById('picTarg').src = newP;
+    }
+    function bRadDigi(tg,sz){
+      let digis = document.querySelectorAll(tg);
+      for(x in digis){
+        digis[x].style.borderRadius=sz;
+      }
+    }
+    function hideDigis(){
+      let digis = document.querySelectorAll('.digi');
+      for(x in digis){
+        digis[x].style.display='none';
+      }
+    }
+    
+  </script>
+</head>
+<body onload="" ondblclick="" onscroll="">
+  <h1 onclick="">Photo Gallery 2</h1>
+  <button onclick="bRadDigi('.digi','50%')">Border Radius 50%</button>
+  <button onclick="bRadDigi('.digi','30px')">Border Radius 30px</button>
+  <button onclick="bRadDigi('.digi','0')">no Border Radius</button>
+  <button onclick="hideDigis()">Hide Digis</button>
+  <ul>
+    <li onclick='chPic("images/pic01.jpg")'><img src="images/pic01.jpg" class="digi" alt=""></li>
+    <li onclick='chPic("images/pic02.jpg")'><img src="images/pic02.jpg" class="" alt=""></li>
+    <li onclick='chPic("images/pic03.jpg")'><img src="images/pic03.jpg" class="digi" alt=""></li>
+    <li onclick='chPic("images/pic04.jpg")'><img src="images/pic04.jpg" class="" alt=""></li>
+    <li onclick='chPic("images/pic05.jpg")'><img src="images/pic05.jpg" class="digi" alt=""></li>
+    <li onclick='chPic("images/pic06.jpg")'><img src="images/pic06.jpg" class="" alt=""></li>
+    <li onclick='chPic("images/pic07.jpg")'><img src="images/pic07.jpg" class="" alt=""></li>
+    <li onclick='chPic("images/pic08.jpg")'><img src="images/pic08.jpg" class="digi" alt=""></li>
+    <li onclick='chPic("images/pic09.jpg")'><img src="images/pic09.jpg" class="digi" alt=""></li>
+  </ul>
+  <img src="images/spacer.png" id="picTarg">
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,=">
+  <title>jQ 04 - Effects</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body{ padding: 20px;}
+    button{padding: 5px 20px; margin: 10px;}
+    hr{ margin: 10px; border: none; border-top: 2px dashed green;}
+    h1{ text-align: center;}
+    img{ width: 300px; height: auto;}
+    
+  </style>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#btn11').click(function() { $('#pic1').hide(1000);   })
+      $('#btn12').click(function() { $('#pic1').show(1500, function(){alert('hahahahah')}) })
+      $('#btn13').click(function() { $('#pic1').toggle(500, ()=>{alert('Togggggggled')});   })
+      
+      $('#btn21').click(function() { $('#pic2').fadeOut(500);   })
+      $('#btn22').click(function() { $('#pic2').fadeIn(1800);   })
+      $('#btn23').click(function() { $('#pic2').fadeToggle(800);   })
+      
+      $('#btn31').click(function() { $('#pic3').slideUp(500);   })
+      $('#btn32').click(function() { $('#pic3').slideDown(1800);   })
+      $('#btn33').click(function() { $('#pic3').slideToggle(800);   })
+    })  
+  </script>
+</head>
+<body>
+<h1>Using jQuery - Effects</h1>
+<button id="btn11">Hide Pic</button> 
+<button id="btn12">Show Pic</button> 
+<button id="btn13">Toggle Pic</button> 
+<hr>
+<button id="btn21">FadeOut Pic</button> 
+<button id="btn22">FadeIn Pic</button> 
+<button id="btn23">FadeToggle Pic</button> 
+<hr>
+<button id="btn31">SlideUp Pic</button> 
+<button id="btn32">SlideDown Pic</button> 
+<button id="btn33">SlideToggle Pic</button> 
+<hr>
+
+
+ <img src="images/Pic01.jpg" id="pic1">
+ <img src="images/Pic02.jpg" id="pic2">
+ <img src="images/Pic03.jpg" id="pic3">
+  
+</body>
+</html>

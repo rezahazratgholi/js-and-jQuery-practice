@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,=">
+  <title>jQ 01</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/raz.css">
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.5s;}
+    html{ scroll-behavior: smooth;}
+    h1{ text-align: center;}
+    section{padding: 10px; margin:10px  ;}
+    .cls1{ background-color: pink; font-weight: bold; margin: 3px 0; padding: 10px;}
+  </style>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#btn1').click(function(){
+        $('section:nth-of-type(2) li:even').toggleClass('cls1');
+      })
+
+      $('#btn2').click(function(){    alert( $('h1').eq(0).text() );      })
+      $('#btn3').click(function(){    $('h1').eq(0).text('hahahahaahah');      })
+      $('#btn4').click(function(){    
+        $('section')
+          .eq(0)
+          .find('li')
+            .eq(4)
+              .text('aaaaaaaaaa')
+            .end()
+            .eq(1)
+              .text('BBBBBBBB')      
+      })
+    })  
+  </script>
+</head>
+<body>
+<h1>Using jQuery</h1>
+<button id="btn1">Add Class</button> <hr>
+<button id="btn2">H1 get Text</button>
+<button id="btn3">H1 set Text</button>
+<button id="btn4">Change LI Texts</button>
+<section>
+  <h2>Perspiciatis</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis harum ducimus molestias facere voluptatem placeat perferendis aspernatur libero illum corporis quibusdam quia, debitis tenetur veritatis quo corrupti omnis? , architecto perferendis. Minus possimus nam, quos at rerum accusantium illo distinctio magnam, quaerat soluta dolorum praesentium.</p>
+  <ol>
+    <li>Quae, nobis quam?</li>
+    <li>Vitae, culpa sed!</li>
+    <li>Ut, soluta assumenda!</li>
+    <li>Cum, quisquam? Inventore?</li>
+    <li>Expedita, odio alias.</li>
+    <li>Accusamus, explicabo voluptatum.</li>
+    <li>Dolore, veniam aut?</li>
+  </ol>
+  <p>Expedita aperiam in molestias blanditiis suscipit quidem adipisci vel ea aut eius. Maxime aliquid reprehenderit animi labore, tenetur vitae facilis, maiores at optio iure repellat eveniet. Illo fuga a adipisci vel iure sint error, autem pariatur ipsum sequi earum non quibusdam consectetur. Perspiciatis, perferendis cum?</p>
+  
+</section>
+<section>
+  <h2>aliquam</h2>
+  <p>Cum ipsam itaque sint error dolor repudiandae tenetur distinctio suscipit quaerat deleniti harum amet obcaecati, excepturi praesentium. Laboriosam accusamus assumenda dolore aut incidunt voluptatem delectus? Error recusandae tempora eum repellendus vitae minima placeat soluta id molestias. Animi, soluta eum. Odio provident unde dolor nostrum obcaecati?</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore debitis ut, assumenda veniam tenetur quisquam officia deleniti ratione doloribus, sed placeat odio? Necessitatibus maxime reiciendis atque odit, inventore ipsam. Non tempore fuga facilis odio maiores sint cupiditate ipsa debitis itaque ratione, quidem ipsum deserunt ab!</p>
+  <ol>
+    <li>Laborum at amet fugiat.</li>
+    <li>Sapiente quaerat saepe placeat!</li>
+    <li>Eligendi modi necessitatibus aspernatur!</li>
+    <li>Commodi harum pariatur facere.</li>
+    <li>Minima id illum molestias?</li>
+    <li>Consectetur maiores veritatis assumenda?</li>
+    <li>Laboriosam quasi accusantium dicta.</li>
+  </ol>
+  <p>Quod, tenetur ab ullam amet consequuntur voluptatibus aliquid vel quas aspernatur. Numquam magnam unde possimus magni error adipisci pariatur nulla provident corrupti velit at, suscipit temporibus quam nemo eos vero  doloremque eum placeat ex labore dolorem dolores ipsum maxime? Et repellendus ipsa consequatur quidem.</p>
+  <p>Hic consequatur sed saepe minus. Architecto nesciunt corrupti cumque, quaerat modi libero ea mollitia aliquam repellendus, distinctio a voluptatibus nulla iusto atque voluptatum consequuntur suscipit tempora, aliquid consectetur ipsum ratione voluptatem rem doloribus? Inventore magnam quas voluptates minus animi aliquid asperiores nam accusamus? Deserunt, blanditiis.</p>
+</section>
+  
+</body>
+</html>

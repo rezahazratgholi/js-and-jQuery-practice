@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,=">
+  <title>jQ 04 - Effects</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body{ padding: 20px;}
+    button{padding: 5px 20px; margin: 5px;}
+    hr{ margin: 5px; border: none; border-top: 2px dashed green;}
+    h1{ text-align: center;}
+    img{ width: 300px; height: auto;}
+    section{ background-color: #a3eef8; width: 600px; padding: 20px; margin: 10px auto; padding-bottom: 10px;}
+    section .fa-chevron-down{ 
+      display: block; text-align: center; cursor: pointer; color: red; opacity: 0.5; transition: all 0.5s;}
+    section .fa-chevron-down:hover{ opacity: 1; }
+    .r180{transform: rotate(180deg);}
+
+    #box{width: 300px; height: 200px; background-color: #127c2dcb; text-align: center; font-weight: bold; border-radius: 10px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 500; color: #fff;}
+  </style>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#btn11').click(function() { $('#pic1').hide(1000);   })
+      $('#btn12').click(function() { $('#pic1').show(1500, function(){alert('hahahahah')}) })
+      $('#btn13').click(function() { $('#pic1').toggle(500, ()=>{alert('Togggggggled')});   })
+      
+      $('#btn21').click(function() { $('#pic2').fadeOut(500);   })
+      $('#btn22').click(function() { $('#pic2').fadeIn(1800);   })
+      $('#btn23').click(function() { $('#pic2').fadeToggle(800);   })
+      
+      $('#btn31').click(function() { $('#pic3').slideUp(500);   })
+      $('#btn32').click(function() { $('#pic3').slideDown(1800);   })
+      $('#btn33').click(function() { $('#pic3').slideToggle(800);   })
+
+      $('section').find('p').slideUp(1);
+      $('section').find('.fa').click(function(){
+        $(this).parent().find('p').slideToggle(1000,function(){
+          $(this).next().toggleClass('r180')
+        });
+      });
+
+      $('#box').hide();
+      $('img').click(function(){        
+        $('#box').html( $(this).attr('src') ).fadeIn(500).delay(2000).fadeOut(300);
+      });
+
+    })  
+  </script>
+</head>
+<body>
+<h1>Using jQuery - Effects</h1>
+<button id="btn11">Hide Pic</button> 
+<button id="btn12">Show Pic</button> 
+<button id="btn13">Toggle Pic</button> 
+<hr>
+<button id="btn21">FadeOut Pic</button> 
+<button id="btn22">FadeIn Pic</button> 
+<button id="btn23">FadeToggle Pic</button> 
+<hr>
+<button id="btn31">SlideUp Pic</button> 
+<button id="btn32">SlideDown Pic</button> 
+<button id="btn33">SlideToggle Pic</button> 
+<hr>
+
+<div id="box"></div>
+
+ <img src="images/Pic01.jpg" id="pic1">
+ <img src="images/Pic02.jpg" id="pic2">
+ <img src="images/Pic03.jpg" id="pic3">
+
+ <section>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, doloremque dolore. Fugiat impedit aperiam harum laudantium a saepe obcaecati facilis, asperiores nostrum, maxime amet nobis quis debitis quod tempore odio. Laboriosam rerum quisquam libero tempore dolorum doloremque commodi aspernatur labore aperiam odio laudantium ab nam rem voluptatem illum optio accusamus, dolores nihil molestiae recusandae at placeat numquam totam id? Consectetur veniam nesciunt quisquam eius, ducimus earum. Minus eaque quo, vitae accusantium, incidunt excepturi quis libero iusto accusamus, voluptate impedit officiis temporibus quos minima esse? Molestias dolore necessitatibus vitae dolores voluptate!</p>
+   <i class="fa fa-chevron-down fa-2x"></i>
+ </section>
+ <section>
+   <p>es nihil molestiae recusandae at placeat numquam totam id? Consectetur veniam nesciunt quisquam eiuLorum laudantium a saepe obcaecati facilis, asperiores nostrum, maxime amet nobis quis debitis quod tempore odio. Laboriosam rerum quisquam libero tempore dolorum doloremque commodi aspernatur labore aperiam odio laudantium ab nam rem voluptatem illum optio accusamus, dolors, ducimus earum. Minus eaque quo, vitae accusantium, incidunt excepturi quis libero iusto accusamus, voluptate impedit officiis temporibus quos minima esse? Molestias dolore necessitatibus vitae dolores voluptate!</p>
+   <i class="fa fa-chevron-down fa-2x"></i>
+ </section>
+ <section>
+   <p>modi aspernatur labore aperiam odio laudantium ab nam rem voluptatem illum optio accusamus, dolores Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, doloremque dolore. Fugiat impedit aperiam harum laudantium a saepe obcaecati facilis, asperiores nostrum, maxime amet nobis quis debitrem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, doloremque dolore. Fugiat impedit aperiam harum laudantium a saepe obcaecati facilis, asperiores nostrum, maxime amet nobis quis debitis quod tempore odio. Laboriosam rerum quisquam libero tempore dolorum doloremque comnihil rem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, doloremque dolore. Fugiat impedit aperiam harum laudantium a saepe obcaecati facilis, asperiores nostrum, maxime amet nobis quis debitis quod tempore odio. Laboriosam rerum quisquam libero tempore dolorum doloremque comnihil is quod tempore odio. Laboriosam rerum quisquam libero tempore dolorum doloremque comnihil molestiae recusandae at placeat numquam totam id? Consectetur veniam nesciunt quisquam eius, ducimus earum. Minus eaque quo, vitae accusantium, incidunt excepturi quis libero iusto accusamus, voluptate impedit officiis temporibus quos minima esse? Molestias dolore necessitatibus vitae dolores voluptate!</p>
+   <i class="fa fa-chevron-down fa-2x"></i>
+ </section>
+  
+</body>
+</html>

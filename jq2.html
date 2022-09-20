@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,=">
+  <title>jQ 03</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/raz.css">
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box; transition: all 0.5s;}
+    html{ scroll-behavior: smooth;}
+    h1{ text-align: center;}
+    img{ width: 300px; height: auto;}
+    .bigger{ width: 500px;   }
+    .bordered{border: 10px solid red;}
+    .rounded{ border-radius: 30px;}
+    .active{color: red; font-size: 2rem;}
+  </style>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#btn1').click(function() {  $('#picTarg').addClass('bigger')       })
+      $('#btn21').click(function(){  $('#picTarg').addClass('bordered')     })
+      $('#btn22').click(function(){  $('#picTarg').removeClass('bordered')  })
+      $('#btn3').click(function() {  $('#picTarg').toggleClass('rounded')   })
+
+      $('h2').click(function(){
+        $('h2').removeClass('active');
+        $(this).addClass('active');
+      })
+
+      $('#btn4').click(function(){
+       $('#picTarg').width(500);
+      })
+
+      console.log( $(window).outerHeight() );
+    })  
+  </script>
+</head>
+<body>
+<h1>Using jQuery - CSS</h1>
+<button id="btn1">Bigger</button> 
+<button id="btn21">Add Border</button> 
+<button id="btn22">Remove Border</button> 
+<button id="btn3">Toggle Radius </button> 
+<button id="btn4">Image Size </button> 
+
+<hr>
+<section>
+  <h2>Praesentium</h2>
+  <p>Laboriosam accusamus assumenda dolore aut incidunt voluptatem delectus? Error recusandae tempora eum repellendus id. Animi soluta eum. Odio provident unde dolor obcaecati?</p>
+ <img src="images/Pic10.jpg" id="picTarg">
+</section>
+<hr>
+<h2>Rerum fugit consequatur inventore rem.</h2>
+<h2>Ducimus eos officia quis nihil!</h2>
+<h2>Lorem ipsum dolor sit amet.</h2>
+<h2>Magnam nemo facere deserunt recusandae.</h2>
+<h2>Voluptatum, corporis. Impedit, neque culpa?</h2>
+<h2>Dolores perferendis quas deserunt fugiat.</h2>
+  
+</body>
+</html>
